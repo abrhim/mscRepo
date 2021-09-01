@@ -1,6 +1,7 @@
 import "./styles.css";
 import React from "react";
 import mse from "@adobe/magento-storefront-events-sdk";
+import mse2 from "@adobe/magento-storefront-events-sdk";
 import msc from "@adobe/magento-storefront-event-collector";
 
 export default function App() {
@@ -10,6 +11,8 @@ export default function App() {
     console.log("init");
     mse.context.setShopper({ shopperId: "logged-in" });
     mse.publish.pageView();
+    mse2.context.setShopper({ shopperId: "logged-in" });
+    mse2.publish.pageView();
   }, []);
   return (
     <div className="App">
